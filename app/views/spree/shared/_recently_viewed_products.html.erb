@@ -1,10 +1,16 @@
 <% if get_recently_viewed_products.any? %>
   <div id="recently_viewed" data-hook>
-    <h6 class="product-section-title"><%= t(:recently_viewed_products) %></h6>
-    <ul id="recently_viewed_products">
-      <% get_recently_viewed_products.each do |p| %>
-        <li><%= link_to p.name, p %></li>
-      <% end -%>
-    </ul>
+    <div id="recently-viewed-products" class="row normal-products-container">
+      <h3 class="header">Recently Viewed</h3>
+      <div class="products">
+        <div id="recently-viewed-prev" class="carousel-prev"></div>
+        <ul class="normal-carousel" data-type="recently-viewed">
+          <% get_recently_viewed_products.each do |product| %>
+            <%= render 'spree/home/product', :product => product %>
+          <% end %>
+        </ul>
+        <div id="recently-viewed-next" class="carousel-next"></div>
+      </div>
+    </div>
   </div>
 <% end %>
