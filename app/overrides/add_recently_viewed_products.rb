@@ -7,5 +7,5 @@ Deface::Override.new(:virtual_path => 'spree/shared/_products',
 
 Deface::Override.new(:virtual_path => 'spree/products/show',
                      :name => 'add_recently_viewed_products_to_products_show',
-                     :insert_after => "#product_description[data-hook], [data-hook='product_description']",
+                     :insert_top => "[data-hook='recently-viewed-products']",
                      :partial => 'spree/shared/recently_viewed_products')
