@@ -1,7 +1,11 @@
 <% if get_recently_viewed_products.any? %>
   <div id="recently_viewed" data-hook>
     <div id="recently-viewed-products" class="row normal-products-container">
-      <h3 class="header">Recently Viewed</h3>
+      <div class="header">
+        <div class="inner">
+          <div class="title">Recently Viewed</div>
+        </div>
+      </div>
       <div class="products">
         <div id="recently-viewed-prev" class="carousel-prev"></div>
         <ul class="normal-carousel" data-type="recently-viewed">
@@ -10,6 +14,7 @@
           <% end %>
         </ul>
         <div id="recently-viewed-next" class="carousel-next"></div>
+        <div class="footer"></div>
       </div>
     </div>
   </div>
